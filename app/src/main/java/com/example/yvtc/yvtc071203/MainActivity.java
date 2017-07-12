@@ -16,23 +16,23 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        menu.add("Settings");
-        menu.add("About");
-        menu.add("Update");
+        menu.add(0, 0, 1, "Settgings");
+        menu.add(0, 1, 2, "About");
+        menu.add(0, 2, 3, "Update");
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getTitle().equals("Settings"))
+        if (item.getItemId() == 0)
         {
             Toast.makeText(MainActivity.this, "Click Settings", Toast.LENGTH_SHORT).show();
         }
-        if (item.getTitle().equals("About"))
+        if (item.getItemId() == 1)
         {
             Toast.makeText(MainActivity.this, "Click About", Toast.LENGTH_SHORT).show();
         }
-        if (item.getTitle().equals("Update"))
+        if (item.getItemId() == 2)
         {
             Toast.makeText(MainActivity.this, "Click Update", Toast.LENGTH_SHORT).show();
         }
